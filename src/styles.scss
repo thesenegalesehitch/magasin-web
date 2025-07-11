@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "magasin-variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+#entete {
+  height: $hauteurEntete;
+}
+#contenu {
+  margin-top: $hauteurEntete;
+}
+.titrePage {
+  @extend .h1;
+  @extend .text-secondary;
+  @extend .text-center;
+  @extend .border-bottom;
+}
