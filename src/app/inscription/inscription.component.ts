@@ -20,4 +20,8 @@ inscriptionForm : FormGroup=new FormGroup({
 
 
 })
+  // bouton pour le formulaire pour s'inscrire'
+  inscrire() {
+    console.log("Données formulaires :",this.inscriptionForm.value)
+  }
 }
