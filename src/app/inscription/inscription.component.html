@@ -2,7 +2,30 @@
 <div class="titrePage">
   Inscription
 </div>
-<form action="">
+<form [formGroup]="inscriptionForm">
+  <div>
+    <label>Prénom</label>
+    <input formControlName="prenom" type="text" name="prenom" id="prenom">
+  </div>
 
+  <div>
+    <label>Nom</label>
+    <input formControlName="nom" type="text" name="nom" id="nom">
+  </div>
+
+  <div>
+    <label>Adresse mail</label>
+    <input formControlName="email" type="mail" name="adresse" id="adresse">
+  </div>
+
+  <div>
+    <label>Password</label>
+    <input formControlName="password" type="password" name="password" id="password">
+  </div>
+
+  <div>
+    <label>Adresse</label>
+    <input formControlName="adresse" type="text" name="adresse" id="adresse">
+  </div>
 
 </form>
