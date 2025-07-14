@@ -21,7 +21,11 @@ inscriptionForm : FormGroup=new FormGroup({
 
 })
   // bouton pour le formulaire pour s'inscrire'
-  inscrire() {
+  inscrire(): void {
     console.log("Données formulaires :",this.inscriptionForm.value)
+  }
+  // bouton pour effacer le formulaire
+  cleanForm(): void {
+  this.inscriptionForm.reset();
   }
 }
