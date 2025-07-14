@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {Inscription} from '../modeles';
 
 @Component({
   selector: 'app-inscription',
@@ -23,6 +24,17 @@ inscriptionForm : FormGroup=new FormGroup({
   // bouton pour le formulaire pour s'inscrire'
   inscrire(): void {
     console.log("Données formulaires :",this.inscriptionForm.value)
+    const inscription : Inscription = {
+
+      prenom:this.inscriptionForm.get('prenom')?.value,
+      nom:this.inscriptionForm.get('nom')?.value,
+      email:this.inscriptionForm.get('email')?.value,
+      password:this.inscriptionForm.get('password')?.value,
+      adresse:this.inscriptionForm.get('adresse')?.value,
+      roles:[],
+      droits:[]
+    }
+    console.log("send to spring", inscription)
   }
   // bouton pour effacer le formulaire
   cleanForm(): void {
